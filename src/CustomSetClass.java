@@ -46,11 +46,6 @@ public class CustomSetClass<T> implements CustomSet<T>{
 			index++;
 		}		
 	}
-
-	/*
-	 * @Override public void remove(T a) { int x = contains(a); if(x != 0) {
-	 * elements[x-1] = null; update(); } }
-	 */
 	
 	@Override
 	public void remove(T a) {
@@ -84,12 +79,6 @@ public class CustomSetClass<T> implements CustomSet<T>{
 		return 0;
 	}
 	
-	/*
-	 * public void update() { for(int i = 0; i < index; i++) {
-	 * if(elements[i].equals(null)) { elements[i] = elements[i + 1]; for(int j = i +
-	 * 1; j < index; j++) { if(elements[j + 1].equals(null)) { elements[j] = null;
-	 * index --; return; } elements[j] = elements[j + 1]; } } } }
-	 */
 	public void update(int startIndex) {
 		for(int i = startIndex; i < index - 1; i++) {
 			elements[i] = elements[i + 1];
